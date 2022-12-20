@@ -1,0 +1,80 @@
+<style>
+    .student{
+      color: blue;
+      text-align: center;
+    }
+    hr {
+    border: dotted #404258 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 10px auto;
+    }
+    .row{
+        text-align: center;
+        margin: auto 50px;
+    }
+    table, th, td {
+        border: 1px solid;
+        margin: 1px;
+        color: blueviolet;
+    }
+    .note{
+        border: 0.5px solid gray;
+        margin: 20px 50px;
+        padding: 20px;
+        color: green;
+    }
+    h4{
+        text-align: center;
+      }
+  </style>
+
+<div class="student">
+    <h3>Hello! I am Aniket</h3>
+    <p>from student-list.component.html</p>
+    <p>(Component 2)</p>
+  </div>
+<hr>
+<div class="row">
+    <table>
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Reg. No.</th>
+                <th scope="col">Mobile No.</th>
+                <th scope="col">City</th>
+                <th scope="col">College</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let student of students">
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.regno}}</td>
+                <td>{{student.mobileno}}</td>
+                <td>{{student.city}}</td>
+                <td>{{student.college}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="note">
+    <h4>Note</h4>
+    <p>In the above Angular Project there are <strong>3 Components, 1 Model and 1 service</strong> i.e.</p>
+    <p><strong>Components:</strong></p>
+    <ul>
+        <li>app.component.html (main)</li>
+        <li>student.component.html (component 1)</li>
+        <li>student-list.component.html (component 2)</li>
+    </ul>
+    <p><strong>Model:</strong></p>
+    <ul>
+        <li>student.model.ts</li>
+    </ul>
+    <p><strong>service:</strong></p>
+    <ul>
+        <li>student.service.ts</li>
+    </ul>
+</div>
